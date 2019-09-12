@@ -8,7 +8,7 @@ function BasicExample(props) {
      
 
        
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div className='pageSubOne'  dangerouslySetInnerHTML={{ __html: content }} />
      
   
   )

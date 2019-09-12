@@ -14,6 +14,9 @@ function BasicExample(props) {
           <li>
             <Link to="/topics/about">pageAbout</Link>
           </li>
+          <li>
+            <Link to="/topics/config">注销子应用</Link>
+          </li>
         </ul>
 
        

@@ -4,7 +4,7 @@ import { registerMicroApps, start } from 'qiankun';
 import './index.css';
 import App from './App';
 import SubOne from './subOne';
-import SubTwo from './subOne';
+import SubTwo from './subTwo';
 import * as serviceWorker from './serviceWorker';
 
 
@@ -23,7 +23,7 @@ function render(data) {
 
 function rende1({ appContent, loading }) {
     const container=document.getElementsByClassName('main-project-container4')[0];
-    ReactDOM.render(<SubOne loading={loading} content={appContent}/>, container);
+    ReactDOM.render(<SubTwo loading={loading} content={appContent}/>, container);
  }
 
 function genActiveRule(routerPrefix) {
@@ -34,10 +34,10 @@ registerMicroApps(
   [
     { 
       name: 'react app', // app name registered
-      entry: '//localhost:3001',
+      entry: '//localhost:3002',
       render, 
       props:{
-        parentClass:'main-project-container3'
+        parentClass:'subOne'
       },
       activeRule: genActiveRule('/about') },
     { 
@@ -63,4 +63,4 @@ registerMicroApps(
   },
 );
 
-start({ prefetch: true, jsSandbox: true });
+start({ prefetch: false, jsSandbox: true });

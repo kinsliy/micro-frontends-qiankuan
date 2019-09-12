@@ -20,11 +20,11 @@ export async function bootstrap() {
     console.log('mount==>',document.getElementsByClassName(props.parentClass)[0].getElementsByClassName('root')[0])
    //const container= document.getElementsByClassName(props.props.parentClass)[0].getElementsByClassName('root')[0];
 
-   //console.log('subOneCon===>',container)
-    ReactDOM.render(<App/>, document.getElementsByClassName(props.parentClass)[0].getElementsByClassName('root')[0]);
+   console.log('subOneCon===>',document.getElementsByClassName(props.parentClass)[0])
+    ReactDOM.render(<App/>, document.getElementsByClassName(props.parentClass)[0]);
   }
   
   export async function unmount(props) {
    console.log('unmoutd===>',document.getElementsByClassName(props.parentClass))
-    ReactDOM.unmountComponentAtNode(document.getElementsByClassName(props.parentClass)[0].getElementsByClassName('root')[0]);
+    ReactDOM.unmountComponentAtNode(document.getElementsByClassName(props.parentClass)[0]);
   }
