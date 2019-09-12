@@ -39,15 +39,15 @@ registerMicroApps(
         parentClass:'pageSubOne'
       },
       activeRule: genActiveRule('/topics/home') },
-    { 
-      name: 'pagevue app',
-      entry: '//localhost:3002', 
-      props:{
-        parentClass:'page-project-container8'
-      },
-      render:rende1, 
-      activeRule: genActiveRule('/topics/about') 
-    },
+    // { 
+    //   name: 'pagevue app',
+    //   entry: '//localhost:3002', 
+    //   props:{
+    //     parentClass:'page-project-container8'
+    //   },
+    //   render:rende1, 
+    //   activeRule: genActiveRule('/topics/about') 
+    // },
   ],
   {
     beforeLoad: [app => {
