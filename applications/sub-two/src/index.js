@@ -1,10 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import 'weui';
+import { BrowserRouter as Router,Switch ,Route} from 'react-router-dom'
+import 'react-weui/build/packages/react-weui.css';
+import App from './App.js';
 import * as serviceWorker from './serviceWorker';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
+//  ReactDOM.render(<Router>
+   
+   
+//   <App />
+ 
+   
+//    </Router>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -18,7 +27,7 @@ export async function bootstrap() {
   export async function mount(props) {
     console.log(props);
     
-    ReactDOM.render(<App/>, document.getElementsByClassName(props.parentClass)[0].getElementsByClassName('root')[0]);
+    ReactDOM.render(<Router><App/></Router>, document.getElementsByClassName(props.parentClass)[0].getElementsByClassName('root')[0]);
   }
   
   export async function unmount(props) {

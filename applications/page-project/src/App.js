@@ -8,15 +8,15 @@ function BasicExample(props) {
     <Router>
       <div>
         <ul>
-          <li>
+          {/* <li>
             <Link to="/topics/home">pageHome</Link>
-          </li>
+          </li> */}
           {/* <li>
             <Link to="/topics/about">pageAbout</Link>
           </li> */}
-          <li>
+          {/* <li>
             <Link to="/topics/config">关闭父应用时，要先注销子应用</Link>
-          </li>
+          </li> */}
         </ul>
 
        

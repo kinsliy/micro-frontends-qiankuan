@@ -5,6 +5,7 @@
 /applications/page-project/node_modules
 /applications/sub-one/node_modules
 /applications/sub-two/node_modules
+/applications/sub-three/node_modules
 /.pnp
 .pnp.js
 

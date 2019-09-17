@@ -7,8 +7,7 @@ import SubOne from './subOne';
 import SubTwo from './subTwo';
 import * as serviceWorker from './serviceWorker';
 
-
-
+ReactDOM.render(<App/>, document.getElementById('root98'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -38,16 +37,16 @@ registerMicroApps(
       props:{
         parentClass:'pageSubOne'
       },
-      activeRule: genActiveRule('/topics/home') },
-    // { 
-    //   name: 'pagevue app',
-    //   entry: '//localhost:3002', 
-    //   props:{
-    //     parentClass:'page-project-container8'
-    //   },
-    //   render:rende1, 
-    //   activeRule: genActiveRule('/topics/about') 
-    // },
+      activeRule: genActiveRule('/topics') },
+    { 
+      name: 'pagevue app',
+      entry: '//localhost:3004', 
+      props:{
+        parentClass:'pageSubTwo'
+      },
+      render:rende1, 
+      activeRule: genActiveRule('/topics') 
+    },
   ],
   {
     beforeLoad: [app => {
@@ -56,14 +55,19 @@ registerMicroApps(
     beforeMount: [app => {
       console.log('before mount', app);
     }],
+    beforeUnmount:[app=>{
+      ReactDOM.unmountComponentAtNode(document.getElementsByClassName('pageSubOne')[0]);
+  ReactDOM.unmountComponentAtNode(document.getElementsByClassName('pageSubTwo')[0]);
+    }],
     afterUnmount: [app => {
+      
       console.log('after unload', app);
     }],
   },
 );
 
 
-start({ prefetch: false, jsSandbox: true });
+start({ prefetch: true, jsSandbox: true });
 
 
 export async function bootstrap() {
@@ -76,8 +80,11 @@ export async function mount(props) {
 }
 
 export async function unmount() {
-  //ReactDOM.unmountComponentAtNode(document.getElementsByClassName('page-project-container7')[0].getElementsByClassName('root')[0]);
-  ReactDOM.unmountComponentAtNode(document.getElementById('root98'));
+  
+  
+     ReactDOM.unmountComponentAtNode(document.getElementById('root98'));
+  
+ 
 }
 
 

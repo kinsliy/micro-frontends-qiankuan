@@ -6,7 +6,9 @@ import App from './App';
 import SubOne from './subOne';
 import SubTwo from './subTwo';
 import * as serviceWorker from './serviceWorker';
-
+window.myapp={
+  info:'测试'
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
@@ -27,7 +29,14 @@ function rende1({ appContent, loading }) {
  }
 
 function genActiveRule(routerPrefix) {
-  return (location) => location.pathname.startsWith(routerPrefix);
+  if(routerPrefix==='/'){
+    return (location) => location.pathname=='/';
+  }
+ 
+  return (location) => {
+  
+   return  location.pathname.startsWith(routerPrefix)
+  };
 }
 
 registerMicroApps(
@@ -39,7 +48,7 @@ registerMicroApps(
       props:{
         parentClass:'subOne'
       },
-      activeRule: genActiveRule('/about') },
+      activeRule: genActiveRule('/') },
     { 
       name: 'vue app',
       entry: '//localhost:4000', 

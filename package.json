@@ -68,9 +68,10 @@
     "page:start": "cd applications/page-project && npm  start",
     "subone:start": "cd applications/sub-one && npm  start",
     "subtwo:start": "cd applications/sub-two && npm  start",
+    "subthree:start": "cd applications/sub-three && npm  start",
     "build": "node scripts/build.js",
     "start": "node scripts/start.js",
-    "pre:install": "npm i && cd applications/page-project && npm i && cd ../sub-one && npm i && cd ../sub-two && npm i ",
+    "pre:install": "npm i && cd applications/page-project && npm i && cd ../sub-one && npm i && cd ../sub-two && npm i&& cd ../sub-three && npm i ",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
