@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import { withRouter } from "react-router";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { Button ,Picker,CellsTitle,Form,FormCell,CellHeader,Label,CellBody,Input,CellFooter} from 'react-weui';
 import './app.scss';
 
@@ -70,8 +70,9 @@ getData =() =>{
      return(
         <Router>
        <div  className='dksjdfsdkhwioewoejw'>
+           <div>子应用1</div>
           <div className='top'>
-             <img alt='首页图片'  src={topImg}/>
+             <img alt='首页图片'  src='https://open-cdn.zhongan.com/dm/assembler/39aaa8ff7eca66802b0f5aa5753fb979.png'/>
           </div>
 
           <div className='middle'>
@@ -131,8 +132,10 @@ getData =() =>{
             </Form>
           </div>
           <div className='bottom'>
-            <CellsTitle>保险产品对比</CellsTitle>
-             <img alt='首页图片'  src={product}/>
+            <CellsTitle>保险产品介绍</CellsTitle>
+             <img alt='首页图片'  src='https://open-cdn.zhongan.com/dm/assembler/919b09b569b2e99e5ff14c44d514acbc.png'/>
+             <img alt='首页图片'  src='https://open-cdn.zhongan.com/dm/assembler/32cbaea7a166a5617cf6e5f89c23571f.png'/>
+             <img alt='首页图片'  src='https://open-cdn.zhongan.com/dm/assembler/eb9fa112dadcf82d712ca341d5479f98.png'/>
           </div>
          <div  className='nextButton'>
             <Router>

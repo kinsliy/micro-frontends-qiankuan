@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 function BasicExample(props) {
   const { content, loading ,match} = props;
@@ -8,15 +8,15 @@ function BasicExample(props) {
     <Router>
       <div>
         <ul>
-          {/* <li>
-            <Link to="/topics/home">pageHome</Link>
-          </li> */}
-          {/* <li>
-            <Link to="/topics/about">pageAbout</Link>
-          </li> */}
-          {/* <li>
-            <Link to="/topics/config">关闭父应用时，要先注销子应用</Link>
-          </li> */}
+          <li>
+            子应用2:
+          </li>
+          <li>
+            <Link to="/topics/index">进入子程序</Link>
+          </li>
+          <li>
+            <Link to="/topics/about">关闭父应用时，要先注销子应用</Link>
+          </li>
         </ul>
 
        

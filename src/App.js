@@ -1,20 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import { HashRouter as Router, Route, Link } from "react-router-dom";
+import './App.css'
 function BasicExample(props) {
   const { content, loading } = props;
   return (
     <Router>
       <div className='main-project'>
-        <ul>
+        <div>主应用：</div>
+        <ul className='ul'>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/home">首页</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/topics">Topics</Link>
+            <Link to="/topics">用户信息</Link>
           </li>
         </ul>
 

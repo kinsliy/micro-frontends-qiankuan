@@ -52,6 +52,7 @@ class App extends React.Component{
     return(
       <div className='dsjkdhsdmhbsdsjkd'>
           <div className='top'>
+          <div>子应用2的子应用1</div>
           <CellsTitle>用户信息</CellsTitle>
             <Form>
                 <FormCell>

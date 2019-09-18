@@ -23,10 +23,16 @@ export async function bootstrap() {
    //const container= document.getElementsByClassName(props.props.parentClass)[0].getElementsByClassName('root')[0];
 
    console.log('subOneCon===>',document.getElementsByClassName(props.parentClass)[0])
-    ReactDOM.render(<App/>, document.getElementsByClassName(props.parentClass)[0]);
+    ReactDOM.render(<App/>, document.getElementById('root1000'));
   }
   
   export async function unmount(props) {
-   console.log('unmoutd===>',document.getElementsByClassName(props.parentClass))
-    ReactDOM.unmountComponentAtNode(document.getElementsByClassName(props.parentClass)[0]);
+   console.log('unmoutd===>',props)
+   let el = document.getElementById('root1000');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'root1000';
+    document.body.appendChild(el);
+  }
+    ReactDOM.unmountComponentAtNode(el);
   }

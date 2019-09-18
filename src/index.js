@@ -35,7 +35,7 @@ function genActiveRule(routerPrefix) {
  
   return (location) => {
   
-   return  location.pathname.startsWith(routerPrefix)
+   return  location.hash.startsWith(routerPrefix)
   };
 }
 
@@ -48,7 +48,7 @@ registerMicroApps(
       props:{
         parentClass:'subOne'
       },
-      activeRule: genActiveRule('/') },
+      activeRule: genActiveRule('#/home') },
     { 
       name: 'vue app',
       entry: '//localhost:4000', 
@@ -56,8 +56,9 @@ registerMicroApps(
       props:{
         parentClass:'main-project-container4'
       },
-      activeRule: genActiveRule('/topics') 
+      activeRule: genActiveRule('#/topics') 
     },
+    
   ],
   {
     beforeLoad: [app => {

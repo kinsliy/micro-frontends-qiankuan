@@ -8,6 +8,17 @@
   pointer-events: none;
 }
 
+.ul{
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+.ul li{
+  display: flex;
+  width: 30%;
+  font-size: 17px;
+  justify-content: center;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -33,6 +33,7 @@ class App extends React.Component{
     return(
       <div className='dsjkdhsdmhbsdsjkd'>
           <div className='top'>
+          <div>子应用2的子应用2</div>
           <Preview>
             <PreviewHeader>
                 <PreviewItem label="Total" value={prices} />

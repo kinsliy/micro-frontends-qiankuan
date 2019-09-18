@@ -14,6 +14,10 @@ ReactDOM.render(<App/>, document.getElementById('root98'));
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
+window.addEventListener('single-spa:app-change-event', evt => {
+  console.log('2123113=>',evt)
+})
+
 function render(data) {
   const container=document.getElementsByClassName('page-project-container7')[0];
   ReactDOM.render(<SubOne loading={data.loading} content={data.appContent}/>, container);
@@ -25,7 +29,7 @@ function rende1({ appContent, loading }) {
  }
 
 function genActiveRule(routerPrefix) {
-  return (location) => location.pathname.startsWith(routerPrefix);
+  return (location) => location.hash.startsWith(routerPrefix);
 }
 
 registerMicroApps(
@@ -37,7 +41,8 @@ registerMicroApps(
       props:{
         parentClass:'pageSubOne'
       },
-      activeRule: genActiveRule('/topics') },
+      activeRule: genActiveRule('#/topics/index') },
+      
     { 
       name: 'pagevue app',
       entry: '//localhost:3004', 
@@ -45,7 +50,7 @@ registerMicroApps(
         parentClass:'pageSubTwo'
       },
       render:rende1, 
-      activeRule: genActiveRule('/topics') 
+      activeRule: genActiveRule('#/topics/index') 
     },
   ],
   {
@@ -56,8 +61,6 @@ registerMicroApps(
       console.log('before mount', app);
     }],
     beforeUnmount:[app=>{
-      ReactDOM.unmountComponentAtNode(document.getElementsByClassName('pageSubOne')[0]);
-  ReactDOM.unmountComponentAtNode(document.getElementsByClassName('pageSubTwo')[0]);
     }],
     afterUnmount: [app => {
       
@@ -79,8 +82,8 @@ export async function mount(props) {
   ReactDOM.render(<App/>, document.getElementById('root98'));
 }
 
-export async function unmount() {
-  
+export async function unmount(props) {
+   console.log('2121221212=>>',props.singleSpa.getAppStatus('pagereact app')) 
   
      ReactDOM.unmountComponentAtNode(document.getElementById('root98'));
   
