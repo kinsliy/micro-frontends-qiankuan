@@ -15,10 +15,10 @@ function BasicExample(props) {
             <Link to="/">回到首页</Link>
           </li> */}
           <li>
-            <Link to="/topics/index">进入子页面</Link>
+            <Link to="/topics/index">进入保费试算</Link>
           </li>
           <li>
-            <Link to="/topics/about">卸载子应用</Link>
+            <Link to="/topics/about">返回</Link>
           </li>
         </ul>
 
