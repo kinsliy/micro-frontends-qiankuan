@@ -62,7 +62,7 @@ getData =() =>{
     window.dispatchEvent(myEvent);
     window.myapp.userinfo=this.state;
     localStore.set('userInfo',this.state)
-    this.props.history.push('/topics')
+    this.props.history.push('/#/topics')
    console.log(this.state)
 }
 

@@ -29,23 +29,20 @@ class App extends React.Component{
 
     
   render(){
-     const prices = '$:'+this.state.price;
+     const prices = this.state.price;
     return(
       <div className='dsjkdhsdmhbsdsjkd'>
           <div className='top'>
           <div>子应用2的子应用2</div>
           <Preview>
             <PreviewHeader>
-                <PreviewItem label="Total" value={prices} />
+                <PreviewItem label="购买总数" value={prices} />
             </PreviewHeader>
             <PreviewBody>
-                <PreviewItem label="Product" value="Name" />
-                <PreviewItem label="Description" value="Product Description" />
-                <PreviewItem label="Details" value="Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. " />
+                <PreviewItem label="产品" value="意外医疗险" />
+                <PreviewItem label="描述" value="最高700万意外身故/伤残保障" />
+                <PreviewItem label="细节" value="180天-65周岁可投保，续保可至70周岁 " />
             </PreviewBody>
-            <PreviewFooter>
-                <PreviewButton primary>Action</PreviewButton>
-            </PreviewFooter>
         </Preview>
           </div>
       </div>
