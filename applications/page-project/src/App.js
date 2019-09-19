@@ -11,11 +11,14 @@ function BasicExample(props) {
           {/* <li className='title'>
             下面是子应用2:
           </li> */}
-          <li>
+          {/* <li>
             <Link to="/">回到首页</Link>
+          </li> */}
+          <li>
+            <Link to="/topics/index">进入子页面</Link>
           </li>
           <li>
-            <Link to="/topics/about">关闭投保信息页面</Link>
+            <Link to="/topics/about">卸载子应用</Link>
           </li>
         </ul>
 
