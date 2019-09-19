@@ -7,10 +7,10 @@ function BasicExample(props) {
   return (
     <Router>
       <div className='pageProject'>
-        <ul >
-          <li className='title'>
+        <ul className='ul'>
+          {/* <li className='title'>
             下面是子应用2:
-          </li>
+          </li> */}
           <li>
             <Link to="/topics/index">进入投保信息页面</Link>
           </li>

@@ -70,7 +70,7 @@ getData =() =>{
      return(
         <Router>
        <div  className='dksjdfsdkhwioewoejw'>
-           <div>子应用1</div>
+           {/* <div className='title'>子应用1</div> */}
           <div className='top'>
              <img alt='首页图片'  src='https://open-cdn.zhongan.com/dm/assembler/39aaa8ff7eca66802b0f5aa5753fb979.png'/>
           </div>

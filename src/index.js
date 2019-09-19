@@ -5,6 +5,8 @@ import './index.css';
 import App from './App';
 import SubOne from './subOne';
 import SubTwo from './subTwo';
+import 'weui';
+import 'react-weui/build/packages/react-weui.css';
 import * as serviceWorker from './serviceWorker';
 window.myapp={
   info:'测试'

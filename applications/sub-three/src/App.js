@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import localStore from  'store';
-import {Preview, PreviewHeader, PreviewFooter, PreviewBody, PreviewItem, PreviewButton} from 'react-weui';
+import {Preview, PreviewHeader,CellsTitle, PreviewFooter, PreviewBody, PreviewItem, PreviewButton} from 'react-weui';
 import './app.scss';
 
 class App extends React.Component{
@@ -33,7 +33,8 @@ class App extends React.Component{
     return(
       <div className='dsjkdhsdmhbsdsjkd'>
           <div className='top'>
-          <div className='title'>下面是子应用2的子应用2</div>
+          <CellsTitle>产品展示</CellsTitle>
+          {/* <div className='title'>下面是子应用2的子应用2</div> */}
           <Preview>
             <PreviewHeader>
                 <PreviewItem label="购买总数" value={prices} />

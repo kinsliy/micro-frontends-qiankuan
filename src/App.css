@@ -26,9 +26,10 @@ a{
 }
 .ul li{
   display: flex;
-  width: 30%;
+  width: 50%;
   font-size: 17px;
   justify-content: center;
+  cursor: pointer;
 }
 .App-header {
   background-color: #282c34;

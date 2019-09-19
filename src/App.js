@@ -1,12 +1,22 @@
 import React from "react";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { Tab, NavBarItem, Article } from 'react-weui';
 import './App.css'
+
 function BasicExample(props) {
   const { content, loading } = props;
+
+  function demo1 (){
+    console.log(212)
+    props.history.push('/#/home')
+  }
+
+
+
   return (
     <Router>
       <div className='main-project'>
-        <div className='title'>下面是主应用：</div>
+        {/* <div className='title'>下面是主应用：</div> */}
         <ol className='ul'>
           <li>
             <Link to="/home">首页</Link>
@@ -15,6 +25,8 @@ function BasicExample(props) {
             <Link to="/topics">用户信息</Link>
           </li>
         </ol>
+
+   
 
        
 
