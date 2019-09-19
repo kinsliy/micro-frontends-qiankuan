@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import SubOne from './subOne';
 import SubTwo from './subTwo';
+import SubThree from './subThree';
 import 'weui';
 import 'react-weui/build/packages/react-weui.css';
 import * as serviceWorker from './serviceWorker';
@@ -30,6 +31,12 @@ function rende1({ appContent, loading }) {
     ReactDOM.render(<SubTwo loading={loading} content={appContent}/>, container);
  }
 
+ function rende2({ appContent, loading }) {
+  const container=document.getElementsByClassName('main-project-container5')[0];
+  ReactDOM.render(<SubThree loading={loading} content={appContent}/>, container);
+}
+
+
 function genActiveRule(routerPrefix) {
   if(routerPrefix==='#/'){
     return (location) => location.hash=='#/';
@@ -53,8 +60,17 @@ registerMicroApps(
       activeRule: genActiveRule('#/') },
     { 
       name: 'vue app',
-      entry: '//localhost:4000', 
+      entry: '//localhost:3001', 
       render:rende1, 
+      props:{
+        parentClass:'subThree'
+      },
+      activeRule: genActiveRule('#/topics') 
+    },
+    { 
+      name: 'vue112 app',
+      entry: '//localhost:3004', 
+      render:rende2, 
       props:{
         parentClass:'main-project-container4'
       },

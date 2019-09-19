@@ -27,10 +27,10 @@ export async function bootstrap() {
   export async function mount(props) {
     console.log(props);
     
-    ReactDOM.render(<Router><App/></Router>, document.getElementsByClassName(props.parentClass)[0].getElementsByClassName('root')[0]);
+    ReactDOM.render(<Router><App/></Router>, document.getElementsByClassName(props.parentClass)[0]);
   }
   
   export async function unmount(props) {
   
-    ReactDOM.unmountComponentAtNode(document.getElementsByClassName(props.parentClass)[0].getElementsByClassName('root')[0]);
+    ReactDOM.unmountComponentAtNode(document.getElementsByClassName(props.parentClass)[0]);
   }
