@@ -6,15 +6,15 @@ function BasicExample(props) {
   return (
     <Router>
       <div className='main-project'>
-        <div>主应用：</div>
-        <ul className='ul'>
+        <div className='title'>下面是主应用：</div>
+        <ol className='ul'>
           <li>
             <Link to="/home">首页</Link>
           </li>
           <li>
             <Link to="/topics">用户信息</Link>
           </li>
-        </ul>
+        </ol>
 
        
 

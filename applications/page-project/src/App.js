@@ -6,16 +6,16 @@ function BasicExample(props) {
   console.log(props)
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
-            子应用2:
+      <div className='pageProject'>
+        <ul >
+          <li className='title'>
+            下面是子应用2:
           </li>
           <li>
-            <Link to="/topics/index">进入子程序</Link>
+            <Link to="/topics/index">进入投保信息页面</Link>
           </li>
           <li>
-            <Link to="/topics/about">关闭父应用时，要先注销子应用</Link>
+            <Link to="/topics/about">关闭投保信息页面</Link>
           </li>
         </ul>
 
