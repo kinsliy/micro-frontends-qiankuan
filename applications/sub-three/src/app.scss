@@ -1,4 +1,13 @@
 .dsjkdhsdmhbsdsjkd{
     // padding-top: 20px;
     padding-bottom: 30px;
+
+    .topImg{
+        display: flex;
+        width: 100%;
+        >img{
+            display: flex;
+            width: 100%;
+        }
+    }
 }

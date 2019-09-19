@@ -17,14 +17,14 @@ function BasicExample(props) {
     <Router>
       <div className='main-project'>
         {/* <div className='title'>下面是主应用：</div> */}
-        <ol className='ul'>
+        {/* <ol className='ul'>
           <li>
             <Link to="/home">首页</Link>
           </li>
           <li>
             <Link to="/topics">用户信息</Link>
           </li>
-        </ol>
+        </ol> */}
 
    
 

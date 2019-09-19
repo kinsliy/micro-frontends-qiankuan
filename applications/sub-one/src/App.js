@@ -8,9 +8,9 @@ class App extends React.Component{
 
 
   state={
-    name:'测试',
-    phone:'',
-    sex:'',
+    name:'测试姓名',
+    phone:'15698743728',
+    sex:'男',
     num:1,
 
   }
@@ -47,6 +47,10 @@ class App extends React.Component{
     })
    
   }
+
+  alert =() =>{
+    alert('购买成功')
+  }
     
   render(){
     return(
@@ -77,7 +81,7 @@ class App extends React.Component{
                         <Label>性别：</Label>
                     </CellHeader>
                     <CellBody>
-                        <Input type="tel" disabled value={this.state.sex}/>
+                        <Input  disabled value={'男'}/>
                     </CellBody>
                 </FormCell>
                
@@ -88,10 +92,11 @@ class App extends React.Component{
 
           <div  className='middle'>
               <div className='num'>
-                保险你要买{this.state.num} 份
+                <div>保险您要买{this.state.num} 份</div>
+                <Button onClick={this.add}  size='small' type='default' >添加份数</Button>
               </div>
               <div>
-               <Button onClick={this.add}>加</Button>
+              <Button onClick={this.alert} >购买</Button>
               </div>
           </div>
       </div>

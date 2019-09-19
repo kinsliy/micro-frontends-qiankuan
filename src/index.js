@@ -31,8 +31,8 @@ function rende1({ appContent, loading }) {
  }
 
 function genActiveRule(routerPrefix) {
-  if(routerPrefix==='/'){
-    return (location) => location.pathname=='/';
+  if(routerPrefix==='#/'){
+    return (location) => location.hash=='#/';
   }
  
   return (location) => {
@@ -50,7 +50,7 @@ registerMicroApps(
       props:{
         parentClass:'subOne'
       },
-      activeRule: genActiveRule('#/home') },
+      activeRule: genActiveRule('#/') },
     { 
       name: 'vue app',
       entry: '//localhost:4000', 

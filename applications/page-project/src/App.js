@@ -7,12 +7,12 @@ function BasicExample(props) {
   return (
     <Router>
       <div className='pageProject'>
-        <ul className='ul'>
+        <ul className='ul page'>
           {/* <li className='title'>
             下面是子应用2:
           </li> */}
           <li>
-            <Link to="/topics/index">进入投保信息页面</Link>
+            <Link to="/">回到首页</Link>
           </li>
           <li>
             <Link to="/topics/about">关闭投保信息页面</Link>
@@ -21,9 +21,9 @@ function BasicExample(props) {
 
        
 
-    
+      <div className='page-project-container8'  id='container8'></div>
        <div className='page-project-container7' id='container7'></div>
-       <div className='page-project-container8'  id='container8'></div>
+    
       
        
     
