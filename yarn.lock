@@ -6925,8 +6925,8 @@ qs@6.7.0:
   resolved "https://registry.npmjs.org/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
 
 qs@~6.5.2:
-  version "6.5.2"
-  resolved "https://registry.npmjs.org/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
 
 querystring-es3@^0.2.0:
   version "0.2.1"
@@ -7065,6 +7065,14 @@ react-router@5.0.1:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+
+react-weui@^1.2.1:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/react-weui/-/react-weui-1.2.3.tgz#f100018cbc3087d3c3f1b162070d79f22fca8598"
+  dependencies:
+    babel-runtime "^6.26.0"
+    prop-types "^15.7.2"
+    weui "^1.1.0"
 
 react@^16.9.0:
   version "16.9.0"
@@ -8577,6 +8585,10 @@ websocket-driver@>=0.5.1:
 websocket-extensions@>=0.1.1:
   version "0.1.3"
   resolved "https://registry.npmjs.org/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
+
+weui@^1.1.0:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/weui/-/weui-1.1.3.tgz#0f0899bb61bb2ec603b2648367a8139298f81514"
 
 whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3, whatwg-encoding@^1.0.5:
   version "1.0.5"
